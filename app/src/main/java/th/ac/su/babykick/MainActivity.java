@@ -38,6 +38,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        Button button_advice = findViewById(R.id.button_advice);
+        button_advice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, Advice_Activity.class);
+                startActivity(i);
+            }
+        });
+
         final String currentDatecheck = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
         AppExecutors executors = new AppExecutors();
         executors.diskIO().execute(new Runnable() {
@@ -195,6 +205,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
 
     }
     void openWindownDialog(){
