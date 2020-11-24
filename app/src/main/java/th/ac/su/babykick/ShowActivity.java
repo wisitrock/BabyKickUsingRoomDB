@@ -21,20 +21,20 @@ public class ShowActivity extends AppCompatActivity {
         setContentView(R.layout.activity_show);
 
         mRecyclerView = findViewById(R.id.baby_count_view);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(ShowActivity.this));
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(ShowActivity.this)); // setLayout ให้กับ RecyclerView
         final AppExecutors executors = new AppExecutors();
         executors.diskIO().execute(new Runnable() {
             @Override
             public void run() {
                 AppDatabase db = AppDatabase.getInstance(ShowActivity.this);
-                final Babymodel[] Baby = db.userDao().getAllUser();
+                final Babymodel[] Baby = db.userDao().getAllUser(); // get ข้อมูลจาก database แล้วนำไปเก็บใน array baby ซึ่งมี type เป็น class Babymodel
 
 
                 executors.mainThread().execute(new Runnable() {
                     @Override
                     public void run() {
-                        BabyAdapter adapter = new   BabyAdapter(ShowActivity.this, Baby);
-                        mRecyclerView.setAdapter(adapter);
+                        BabyAdapter adapter = new   BabyAdapter(ShowActivity.this, Baby); // สร้าง  object  adapter จาก class  BabyAdapter
+                        mRecyclerView.setAdapter(adapter); // setAdapter ให้กับ RecyclerView
                     }
                 });
 

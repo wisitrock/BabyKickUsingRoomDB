@@ -31,7 +31,7 @@ public class BabyAdapter extends RecyclerView.Adapter<BabyAdapter.MyViewHolder> 
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) { // set ข้อมูลเราจะให้แสดงผล  MyViewHolder
        Babymodel baby = mBabymodel[position];
          holder.dateresult.setText(baby.date);
          holder.countreult.setText(String.valueOf(baby.count));

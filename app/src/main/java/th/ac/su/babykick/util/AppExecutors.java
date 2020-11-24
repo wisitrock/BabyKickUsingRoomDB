@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
-public class AppExecutors {
+public class AppExecutors { // คลาสที่ใช้สำหรับการเรียกใช้ Thread เพื่อทำการ ดึงข้อมูลจาก database แล้วใช้ Thread เพื่อไป set  UI ต่างๆ
 
     private final Executor diskIO, mainThread;
 

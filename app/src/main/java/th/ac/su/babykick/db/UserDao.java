@@ -9,7 +9,7 @@ import androidx.room.Update;
 import th.ac.su.babykick.model.Babymodel;
 
 @Dao
-public interface UserDao {
+public interface UserDao { // คลาสที่เอาไว้สำหรับการ เรียกใช้คำสั่งเพีื่อใช้ จัดการข้อมูลใน database
 
     @Query("SELECT * FROM babycounttb")
     Babymodel [] getAllUser();

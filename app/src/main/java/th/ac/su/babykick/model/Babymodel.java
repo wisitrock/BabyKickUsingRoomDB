@@ -5,7 +5,7 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "BabyCounttb")
-public class Babymodel {
+public class Babymodel { // คลาสที่ใช้ในการ สร้าง colum ในการจัดเก็บข้อมูลลงใน table
 
         @PrimaryKey(autoGenerate = true)
         public final int id;
@@ -33,7 +33,7 @@ public class Babymodel {
         // Alt+Insert
 
 
-    public Babymodel(int id, String date, int time1, int time2, int time3, String lasttime, int count) {
+    public Babymodel(int id, String date, int time1, int time2, int time3, String lasttime, int count) { // Contructor
         this.id = id;
         this.date = date;
         this.time1 = time1;

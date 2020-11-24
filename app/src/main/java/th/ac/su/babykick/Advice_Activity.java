@@ -16,14 +16,14 @@ public class Advice_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_advice_);
 
 
-        TextView mTitleWindow = findViewById(R.id.titleWindow_advice);
+        TextView mTitleWindow = findViewById(R.id.titleWindow_advice); //
         TextView mMessageWindow = findViewById(R.id.messageWindow_advice);
 
-        mTitleWindow.setText(R.string.fatalmovement);
+        mTitleWindow.setText(R.string.fatalmovement);// setText ให้กับ TextView เพื่อเป็นTitleWindow
 
-        StringBuilder stringBuilder = new StringBuilder();
-        String someMessage=null;
-        if(Locale.getDefault().getLanguage().equals("th")){
+        StringBuilder stringBuilder = new StringBuilder(); //สร้าง object จาก StringBuilder
+        String someMessage=null; //กำหนดตัวเปร String someMessage
+        if(Locale.getDefault().getLanguage().equals("th")){ // เช็คว่า ถ้า Locale ของภาษาเป็น ภาษาไทย ก็จะให้ someMessage เก็บความข้อความตามข้างล่างนี้
             Log.i("Language", "Language : " +  Locale.getDefault().getLanguage());
              someMessage = "  ในระยะแรก ของการตั้งครรภ์ทารกจะมีการดิ้น ในรูปแบบที่ต่างกัน โดยทารกจะดิ้นดีมาก แต่เป็นการดิ้นที่ระบบประสาท จะมีการประสานกันน้อยมาก\n" +
                     "\n" +
@@ -71,7 +71,7 @@ public class Advice_Activity extends AppCompatActivity {
                     " \n" +
                     "       - บางรายลูกจะดิ้นครบ 10 ครั้ง ภายในเวลาไม่ถึง 10 นาที ก็ไม่ต้องกังวลว่าผิดปกติ อาจจะเป็นวันที่ลูกดิ้นมาก ถ้าลูกดิ้นไม่ถึง 10 ครั้งใน 1 ชั่วโมง ให้คุณแม่ดื่มนม หรือทานอาหารว่าง แล้วนอนพักเริ่มนับการดิ้นของลูกน้อยใหม่ ถ้าใน 1 ชั่วโมง ลูกยังดิ้นไม่ครบ 10 ครั้งให้นับต่อไปและจดไว้ว่าดิ้นครบ 10 ครั้งในเวลากี่ชั่วโมง\n" +
                     "       - ถ้าหากครบ 12 ชั่วโมง แล้วลูกยังดิ้นไม่ครบ 10 ครั้ง ให้คุณแม่รีบไปพบแพทย์ แพทย์อาจจะใช้เครื่องฟังเสียง ฟังเสียงหัวใจหรือตรวจอัลตราซาวนด์ หรือใช้เครื่องตรวจสภาพของลูกน้อยในครรภ์ เพื่อดูว่าผิดปกติหรือไม่ต่อไป";
-        }else if(Locale.getDefault().getLanguage().equals("en")){
+        }else if(Locale.getDefault().getLanguage().equals("en")){// เช็คว่า ถ้า Locale ของภาษาเป็น ภาษาอัวกฤษ ก็จะให้ someMessage เก็บความข้อความตามข้างล่างนี้
             Log.i("Language", "Language : " +  Locale.getDefault().getLanguage());
             someMessage = " In the early stages of pregnancy, the baby will have to flex. In different ways The baby will flex very well. But it's a flex on the nervous system There will be very little harmonization.\n" +
                     "\n" +
@@ -125,8 +125,8 @@ public class Advice_Activity extends AppCompatActivity {
 
 
 
-        stringBuilder.append(someMessage);
+        stringBuilder.append(someMessage); //นำ StringsomeMessage ไป append ลงใน stringBuilder
 
-        mMessageWindow.setText(stringBuilder.toString());
+        mMessageWindow.setText(stringBuilder.toString()); //แล้วทำการ stringBuilder.toString() แล้ว setText ไปที่ mMessageWindow เพื่อไปแสดงผล
     }
 }

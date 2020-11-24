@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">นับลูกดิน เวอร์ชั่นไทย</string>
+    <string name="app_name">นับลูกดิ้น เวอร์ชั่นไทย</string>
     <string name="nubkrandinkhongtaroung">นับการดิ้นของทารก</string>
     <string name="clickhere">☚ กดที่นี้เพื่อนับ</string>
     <string name="countdownone">ลดจำนวนการนับ</string>
@@ -12,7 +12,7 @@
     <string name="morn_after_din">เช้า-กลางวัน-เย็น</string>
     <string name="count_showdata">จำนวนครั้ง</string>
     <string name="recordofcount">บันทึกการนับ</string>
-    <string name="Lastcount">\"นับครั้งล่าสุดเมื่อเวลา \"</string>
+    <string name="Lastcount"> นับครั้งล่าสุดเมื่อเวลา </string>
     <string name="notification">แจ้งเตือน</string>
     <string name="cannotdecresecount">ไม่สามารถลดจำนวนครั้งได้</string>
     <string name="ok">ตกลง</string>

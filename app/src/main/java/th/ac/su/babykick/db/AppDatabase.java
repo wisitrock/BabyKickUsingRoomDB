@@ -15,7 +15,7 @@ import th.ac.su.babykick.util.AppExecutors;
 @Database(entities = {Babymodel.class}, exportSchema = false, version = 1)
 public abstract class AppDatabase extends RoomDatabase {
     private static final String TAG = "AppDatabase";
-    private static final String DB_NAME = "speedrecord.db";
+    private static final String DB_NAME = "speedrecord.db"; //ชื่อของ database
 
 
     private static AppDatabase sInstance;
@@ -39,7 +39,7 @@ public abstract class AppDatabase extends RoomDatabase {
         return sInstance;
     }
 
-    private static void insertInitialData(final Context context) {
+    private static void insertInitialData(final Context context) { // method ที่เอาให้ใส่ข้อมูลเริ่มต้นลงไปใน database
         AppExecutors executors = new AppExecutors();
         executors.diskIO().execute(new Runnable() {
             @Override
