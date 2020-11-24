@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                             TextView count_babykick = findViewById(R.id.textview_countkick);
                             count_babykick.setText(String.valueOf(count));
                             TextView lasttime_update = findViewById(R.id.lastupdate_textView);
-                            lasttime_update.setText("นับครั้งล่าสุดเมื่อเวลา "+ b.lasttime);
+                            lasttime_update.setText(getString(R.string.Lastcount)+ b.lasttime);
                             ProgressBar bar = findViewById(R.id.progressBar);
                             bar.setProgress(count * 10);
                         }
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                 TextView count_babykick = findViewById(R.id.textview_countkick);
                 count_babykick.setText(String.valueOf(count));
                 TextView lasttime_update = findViewById(R.id.lastupdate_textView);
-                lasttime_update.setText("นับครั้งล่าสุดเมื่อเวลา "+ currentTime);
+                lasttime_update.setText(getString(R.string.Lastcount)+ currentTime);
                 ProgressBar bar = findViewById(R.id.progressBar);
                 bar.setProgress(count * 10);
 
@@ -140,16 +140,16 @@ public class MainActivity extends AppCompatActivity {
 
                 if(count==0){
                     AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
-                    dialog.setTitle("แจ้งเตือน");
-                    dialog.setMessage("ไม่สามารถลดจำนวนครั้งได้");
-                    dialog.setPositiveButton("ตกลง", null);
+                    dialog.setTitle(R.string.notification);
+                    dialog.setMessage(R.string.cannotdecresecount);
+                    dialog.setPositiveButton(R.string.ok, null);
                     dialog.show();
                 }else{
                     AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
-                    dialog.setTitle("แจ้งเตือน");
-                    dialog.setMessage("ต้องการลดจำนวนการนับ 1 ครั้งหรือไม่");
-                    dialog.setNegativeButton("ยกเลิก", null);
-                    dialog.setPositiveButton("ตกลง", new DialogInterface.OnClickListener() {
+                    dialog.setTitle(R.string.notification);
+                    dialog.setMessage(R.string.reducethenumber);
+                    dialog.setNegativeButton(R.string.cancel, null);
+                    dialog.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
 
@@ -179,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
                                                TextView count_babykick = findViewById(R.id.textview_countkick);
                                                count_babykick.setText(String.valueOf(count));
                                                TextView lasttime_update = findViewById(R.id.lastupdate_textView);
-                                               lasttime_update.setText("นับครั้งล่าสุดเมื่อเวลา "+ b.lasttime);
+                                               lasttime_update.setText(getString(R.string.Lastcount)+ b.lasttime);
                                                ProgressBar bar = findViewById(R.id.progressBar);
                                                bar.setProgress(count * 10);
 
@@ -194,7 +194,7 @@ public class MainActivity extends AppCompatActivity {
                             TextView count_babykick = findViewById(R.id.textview_countkick);
                             count_babykick.setText(String.valueOf(count));
                             TextView lasttime_update = findViewById(R.id.lastupdate_textView);
-                            lasttime_update.setText("นับครั้งล่าสุดเมื่อเวลา "+ currentTime);
+                            lasttime_update.setText(getString(R.string.Lastcount)+ currentTime);
                             ProgressBar bar = findViewById(R.id.progressBar);
                             bar.setProgress(count * 10);
                         }

@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">BabyKick</string>
+    <string name="nubkrandinkhongtaroung">Count The Baby Kick</string>
+    <string name="clickhere">☚ Click here to count</string>
+    <string name="countdownone"> Decrease </string>
+    <string name="showalldata"> Show all information </string>
+    <string name="fatalmovement"> Fatal movement </string>
+    <string name="good_in_dialog">Very good</string>
+    <string name="babyhealty_in_dialog">Healthy baby</string>
+    <string name="dateofcount">Date</string>
+    <string name="morn_after_din">Morning-Afternoon-Dinner</string>
+    <string name="count_showdata">Times</string>
+    <string name="recordofcount">Record the count</string>
+    <string name="Lastcount">Count latest  </string>
+    <string name="notification">Notifications</string>
+    <string name="cannotdecresecount">Can not reduce the number of times</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="reducethenumber">Want to reduce the number of counts once?</string>
 </resources>
